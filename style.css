@@ -301,8 +301,8 @@ nav {
 .hero-img-card-icon {
     width: 44px;
     height: 44px;
-    background: var(--accent-light);
-    color: #ffd900;
+    background: #919191;
+    color: #ffffff;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -1029,49 +1029,105 @@ footer p {
     margin-top: 16px;
 }
 
-/* ── MOBILE MENU ── */
-.mobile-menu {
-    display: none;
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.hamburger {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(250, 248, 245, 0.98);
-    backdrop-filter: blur(12px);
-    z-index: 800;
+    top: 4px;
+    right: 24px;
+
+    width: 48px;
+    height: 48px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+    border: none;
+
+    font-size: 2rem;
+    color: var(--charcoal);
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+    transition: 0.3s ease;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 32px;
+
+    background: rgba(24, 21, 19, 0.96);
+
+    backdrop-filter: blur(12px);
+
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s;
 }
 
 .mobile-menu.open {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
 }
 
 .mobile-menu a {
     font-family: 'Cormorant Garamond', serif;
+
     font-size: 2rem;
     font-weight: 300;
-    color: var(--charcoal);
+
+    color: #F3EEE8;
+
     text-decoration: none;
-    transition: color 0.2s;
+
+    transition: color 0.2s ease;
 }
 
 .mobile-menu a:hover {
     color: var(--terracotta);
 }
 
-.close-menu {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--charcoal);
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* MOSTRA HAMBURGER */
+    .hamburger {
+        display: flex;
+    }
+
+    /* ESCONDE MENU DESKTOP */
+    .nav-links {
+        display: none;
+    }
+
 }
 
 /* ── RESPONSIVE ── */

@@ -1,11 +1,25 @@
 
-// Hamburger menu
-document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.add('open');
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+
+    mobileMenu.classList.toggle('open');
+
+    if (mobileMenu.classList.contains('open')) {
+        hamburger.innerHTML = '✕';
+    } else {
+        hamburger.innerHTML = '☰';
+    }
+
 });
-document.getElementById('closeMenu').addEventListener('click', closeMobile);
+
 function closeMobile() {
-    document.getElementById('mobileMenu').classList.remove('open');
+
+    mobileMenu.classList.remove('open');
+
+    hamburger.innerHTML = '☰';
+
 }
 
 // Scroll reveal

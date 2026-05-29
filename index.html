@@ -5,325 +5,412 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Clinica White</title>
+    <title>Clínica Lumina — Saúde & Estética</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
         rel="stylesheet">
 
 </head>
 
 <body>
 
+    <!-- FLOATING BUTTONS -->
+    <div class="float-btns">
+        <a href="https://wa.me/5500000000000" target="_blank" class="float-btn whatsapp" title="WhatsApp">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+        </a>
+        <a href="https://instagram.com/clinicalumina" target="_blank" class="float-btn instagram" title="Instagram">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+        </a>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu">✕</button>
+        <a href="#servicos" onclick="closeMobile()">Serviços</a>
+        <a href="#sobre" onclick="closeMobile()">Sobre</a>
+        <a href="#agendamento" onclick="closeMobile()">Agendamento</a>
+        <a href="#localizacao" onclick="closeMobile()">Localização</a>
+    </div>
+
     <!-- NAV -->
     <nav>
-        <a href="#" class="nav-logo">Geral <span>Clinic</span></a>
+        <a href="#" class="nav-logo">Lumina<span>.</span></a>
         <ul class="nav-links">
-            <li><a href="#sobre">Sobre nós</a></li>
-            <li><a href="#galeria">Estrutura</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#galeria">Espaço</a></li>
+            <li><a href="#sobre">Sobre</a></li>
             <li><a href="#localizacao">Localização</a></li>
-            <li><a href="#agendamento" class="nav-cta">Agendar consulta</a></li>
+            <li><a href="#agendamento" class="nav-cta">Agendar</a></li>
         </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
     </nav>
 
     <!-- HERO -->
-    <section class="hero">
-        <div class="hero-left">
-            <span class="hero-badge">Odontologia de Excelência</span>
-            <h1>Cuidamos do seu <em>sorriso</em> com dedicação</h1>
-            <p class="hero-sub">Atendimento humanizado, tecnologia de ponta e uma equipe apaixonada por transformar
-                sorrisos. Sua saúde bucal em boas mãos.</p>
+    <section class="hero" id="inicio">
+        <div class="hero-text">
+            <span class="hero-badge">Clínica Integrada de Saúde & Estética</span>
+            <h1>Cuidado que <em>transforma</em> bem-estar em beleza</h1>
+            <p>Procedimentos estéticos, odontológicos e de saúde com tecnologia avançada e atendimento humanizado. Você
+                merece o melhor.</p>
             <div class="hero-actions">
-                <a href="#agendamento" class="btn-primary">Agendar consulta</a>
-                <a href="#sobre" class="btn-outline">Conheça a clínica</a>
+                <a href="#agendamento" class="btn-primary">Agendar Consulta</a>
+                <a href="#servicos" class="btn-outline">Ver Serviços</a>
             </div>
         </div>
-        <div class="hero-right">
-            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=900&q=85&auto=format&fit=crop"
-                alt="Dentista profissional sorrindo">
+        <div class="hero-img-wrap">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80&fit=crop"
+                alt="Clínica moderna">
+            <div class="hero-img-card">
+                <div class="hero-img-card-icon">✦</div>
+                <div>
+                    <strong>+2.000 Pacientes</strong>
+                    <p>Atendidos com excelência</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- STATS -->
-    <div class="stats-bar">
-        <div class="stat-item">
-            <div class="stat-number">12+</div>
-            <div class="stat-label">Anos de experiência</div>
+    <div class="stats">
+        <div class="stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Anos de Experiência</span>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">4.800</div>
-            <div class="stat-label">Pacientes atendidos</div>
+        <div class="stat">
+            <span class="stat-num">2k+</span>
+            <span class="stat-label">Pacientes Atendidos</span>
         </div>
-        <div class="stat-item">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Satisfação dos pacientes</div>
+        <div class="stat">
+            <span class="stat-num">15</span>
+            <span class="stat-label">Especialidades</span>
+        </div>
+        <div class="stat">
+            <span class="stat-num">4.9★</span>
+            <span class="stat-label">Avaliação Média</span>
         </div>
     </div>
 
-    <!-- SOBRE NÓS -->
+    <!-- SERVICES -->
+    <section id="servicos">
+        <div class="reveal">
+            <span class="section-label">O que oferecemos</span>
+            <h2 class="section-title">Especialidades & <em>Tratamentos</em></h2>
+            <p class="section-sub">Da prevenção ao tratamento estético, oferecemos uma gama completa de cuidados com
+                equipamentos de última geração.</p>
+        </div>
+        <div class="services-grid reveal">
+            <div class="service-card">
+                <div class="service-icon">🦷</div>
+                <h3>Odontologia</h3>
+                <p>Clareamento dental, ortodontia, implantes, lentes de contato e tratamentos completos para um sorriso
+                    impecável.</p>
+                <span class="service-tag">Odonto</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Estética Facial</h3>
+                <p>Botox, preenchimento, bioestimuladores, peeling químico e tratamentos anti-aging com protocolos
+                    personalizados.</p>
+                <span class="service-tag">Estética</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💆</div>
+                <h3>Estética Corporal</h3>
+                <p>Criolipólise, radiofrequência, ultrassom, drenagem linfática e modelagem corporal com tecnologia
+                    avançada.</p>
+                <span class="service-tag">Corporal</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🩺</div>
+                <h3>Saúde Integrativa</h3>
+                <p>Nutrição clínica, medicina integrativa, exames preventivos e acompanhamento individualizado do seu
+                    bem-estar.</p>
+                <span class="service-tag">Saúde</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💉</div>
+                <h3>Dermatologia</h3>
+                <p>Laserterapia, tratamento de manchas, acne, melasma e procedimentos dermatológicos com especialistas.
+                </p>
+                <span class="service-tag">Dermato</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧘</div>
+                <h3>Bem-estar Mental</h3>
+                <p>Psicoterapia, terapia integrativa e programas de gestão do estresse para cuidar da saúde de forma
+                    completa.</p>
+                <span class="service-tag">Mental</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="galeria">
+        <div class="reveal">
+            <span class="section-label">Nossa Estrutura</span>
+            <h2 class="section-title">Um espaço criado <em>para você</em></h2>
+            <p class="section-sub">Ambientes projetados para oferecer conforto, acolhimento e toda a tecnologia que o
+                seu cuidado merece.</p>
+        </div>
+        <div class="gallery-grid reveal">
+            <div class="gallery-item g1">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80&fit=crop"
+                    alt="Recepção">
+            </div>
+            <div class="gallery-item g2">
+                <img src="https://images.unsplash.com/photo-1704455306251-b4634215d98f?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uc3VsdCVDMyVCM3JpbyUyMG9kb250b2wlQzMlQjNnaWNvfGVufDB8fDB8fHww"
+                    alt="Consultório odonto">
+            </div>
+            <div class="gallery-item g3">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80&fit=crop"
+                    alt="Sala estética">
+            </div>
+            <div class="gallery-item g4">
+                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&q=80&fit=crop"
+                    alt="Equipamento">
+            </div>
+            <div class="gallery-item g5">
+                <img src="https://blog.suryadental.com.br/wp-content/uploads/2016/05/shutterstock_581411425-1.jpg"
+                    alt="Sala de procedimentos">
+            </div>
+            <div class="gallery-item g6">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&q=80&fit=crop"
+                    alt="Sala de espera">
+            </div>
+        </div>
+        <!-- Mobile gallery -->
+        <div class="gallery-mobile">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&fit=crop" alt="Recepção">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffedbe47add?w=800&q=80&fit=crop"
+                alt="Consultório">
+            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&q=80&fit=crop"
+                alt="Equipamentos">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
     <section id="sobre">
-        <div class="about-left">
-            <div class="section-label">Sobre nós</div>
-            <h2>Uma clínica feita para <em>transformar</em> vidas</h2>
-            <p class="about-text">
-                Fundada em 2012, a Sorrir Clinic nasceu com um propósito claro: oferecer odontologia de alto padrão
-                acessível e humanizada. Acreditamos que um sorriso saudável vai muito além da estética — é saúde,
-                autoestima e qualidade de vida.
-            </p>
-            <p class="about-text">
-                Nossa equipe é formada por profissionais especializados em diversas áreas da odontologia, sempre
-                atualizados com as mais recentes técnicas e tecnologias do mercado. Cada paciente é único e recebe um
-                plano de tratamento personalizado.
-            </p>
-
-            <div class="specialties">
-                <div class="specialty-item">
-                    <div class="specialty-title">Ortodontia</div>
-                    <div class="specialty-desc">Aparelhos fixos e alinhadores invisíveis</div>
-                </div>
-                <div class="specialty-item">
-                    <div class="specialty-title">Implantes</div>
-                    <div class="specialty-desc">Reabilitação oral com implantes modernos</div>
-                </div>
-                <div class="specialty-item">
-                    <div class="specialty-title">Estética</div>
-                    <div class="specialty-desc">Clareamento, lentes e facetas de porcelana</div>
-                </div>
-                <div class="specialty-item">
-                    <div class="specialty-title">Clínica Geral</div>
-                    <div class="specialty-desc">Prevenção, limpeza e restaurações</div>
+        <div class="about-inner">
+            <div class="about-img reveal">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=80&fit=crop"
+                    alt="Equipe médica">
+                <div class="about-img-badge">
+                    <span class="num">10+</span>
+                    <span class="lbl">Anos de<br>excelência</span>
                 </div>
             </div>
-        </div>
-
-        <div class="about-right">
-            <div class="doctor-card">
-                <div class="doctor-img-wrap">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=85&auto=format&fit=crop&crop=top"
-                        alt="Dr. Carlos Mendes — Cirurgião-Dentista">
-                </div>
-                <div class="doctor-info">
-                    <div class="doctor-name">Dr. Carlos Mendes</div>
-                    <div class="doctor-cro">CRO-SP 98.372 — Diretor Clínico</div>
-                    <p class="doctor-bio">Especialista em Implantodontia e Cirurgia Oral pela USP. Mestre em Estética
-                        Dental pela UNICAMP. Mais de 12 anos dedicados à odontologia de excelência com foco no bem-estar
-                        do paciente.</p>
+            <div class="about-text reveal">
+                <span class="section-label">Nossa História</span>
+                <h2 class="section-title">Cuidado com <em>propósito</em> e expertise</h2>
+                <p class="section-sub">A Clínica Lumina nasceu da visão de que saúde e estética são inseparáveis.
+                    Reunimos especialistas de diversas áreas para oferecer cuidado completo, personalizado e de alta
+                    qualidade.</p>
+                <div class="about-features">
+                    <div class="about-feat">
+                        <div class="about-feat-dot"></div>
+                        <p><strong>Equipe multidisciplinar</strong> — Médicos, dentistas, esteticistas e terapeutas
+                            trabalhando de forma integrada para o seu bem-estar.</p>
+                    </div>
+                    <div class="about-feat">
+                        <div class="about-feat-dot"></div>
+                        <p><strong>Tecnologia de ponta</strong> — Equipamentos certificados, protocolos atualizados e
+                            técnicas minimamente invasivas com máximos resultados.</p>
+                    </div>
+                    <div class="about-feat">
+                        <div class="about-feat-dot"></div>
+                        <p><strong>Atendimento humanizado</strong> — Cada paciente recebe um plano individualizado. Você
+                            é único e o seu tratamento também deve ser.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- BOOKING -->
+    <section class="booking-section" id="agendamento">
+        <div class="booking-inner">
+            <div class="booking-info reveal">
+                <span class="section-label">Agendamento</span>
+                <h2 class="section-title">Agende sua <em>consulta</em></h2>
+                <p class="section-sub">Preencha o formulário e entraremos em contato pelo WhatsApp para confirmar a
+                    disponibilidade do horário escolhido.</p>
 
-    <!-- GALERIA / ESTRUTURA -->
-    <section id="galeria">
-        <div class="gallery-intro">
-            <div class="section-label" style="margin-top:60px; margin-bottom:12px;">Nossa estrutura</div>
-            <h2
-                style="font-family:var(--font-display);font-size:clamp(28px,2.5vw,40px);font-weight:300;color:var(--charcoal);">
-                Ambiente pensado para o seu <em style="color:var(--sage);font-style:italic;">conforto</em></h2>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=900&q=85&auto=format&fit=crop"
-                    alt="Sala de atendimento odontológico moderna">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1588776814546-1ffbb91ccaeb?w=500&q=85&auto=format&fit=crop"
-                    alt="Consultório odontológico equipado">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=500&q=85&auto=format&fit=crop"
-                    alt="Equipamentos modernos de odontologia">
-            </div>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- AGENDAMENTO -->
-    <section id="agendamento">
-        <div class="schedule-left">
-            <div class="section-label">Agendamento</div>
-            <h2>Agende sua <em>consulta</em> com facilidade</h2>
-            <p class="schedule-note">
-                Preencha o formulário ao lado com seus dados e horário de preferência. Nossa equipe entrará em contato
-                para confirmar a disponibilidade e finalizar seu agendamento.<br><br>
-                Respondemos por WhatsApp em até 2 horas durante o horário comercial.
-            </p>
-        </div>
-
-        <div class="schedule-form">
-            <form id="scheduleForm">
-
-                <div class="form-group">
-                    <label>Nome completo</label>
-                    <input type="text" id="nome" placeholder="Seu nome" required>
+                <div class="booking-hours">
+                    <h4>Horários de Funcionamento</h4>
+                    <div class="hour-row">
+                        <span class="day">Segunda — Sexta</span>
+                        <span class="time">09h00 – 20h00</span>
+                    </div>
+                    <div class="hour-row">
+                        <span class="day">Sábado</span>
+                        <span class="closed">Fechado</span>
+                    </div>
+                    <div class="hour-row">
+                        <span class="day">Domingo</span>
+                        <span class="closed">Fechado</span>
+                    </div>
                 </div>
+                <div class="avail-note">
+                    <span>⚠️</span>
+                    <span>Os horários estão sujeitos à disponibilidade. Após o envio, nossa equipe confirmará pelo
+                        WhatsApp em até 2h úteis.</span>
+                </div>
+            </div>
 
-                <div class="form-row">
+            <div class="booking-form reveal">
+                <p class="form-title">Solicitar Agendamento</p>
+                <p class="form-sub">Campos marcados com * são obrigatórios</p>
+                <div class="form-grid" id="bookingForm">
+                    <div class="form-group full">
+                        <label>Nome Completo *</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo" required>
+                    </div>
                     <div class="form-group">
-                        <label>Número de WhatsApp</label>
+                        <label>WhatsApp / Telefone *</label>
                         <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
                     </div>
-
                     <div class="form-group">
-                        <label>Especialidade (Opcional)</label>
-                        <select id="especialidade">
-                            <option value="">Selecione</option>
-                            <option>Consulta inicial / Avaliação</option>
-                            <option>Limpeza e prevenção</option>
-                            <option>Ortodontia</option>
-                            <option>Implantes</option>
-                            <option>Estética dental</option>
-                            <option>Clareamento</option>
-                            <option>Outros</option>
+                        <label>Serviço <span class="opt">(opcional)</span></label>
+                        <select id="servico">
+                            <option value="">Selecione...</option>
+                            <option>Odontologia</option>
+                            <option>Estética Facial</option>
+                            <option>Estética Corporal</option>
+                            <option>Dermatologia</option>
+                            <option>Saúde Integrativa</option>
+                            <option>Bem-estar Mental</option>
+                            <option>Outro</option>
                         </select>
                     </div>
-                </div>
-
-                <div class="form-row">
+                    <div class="form-group full">
+                        <label>Endereço *</label>
+                        <input type="text" id="endereco" placeholder="Rua, número, bairro, cidade" required>
+                    </div>
                     <div class="form-group">
-                        <label>Data de preferência</label>
+                        <label>Data Desejada *</label>
                         <input type="date" id="data" required>
                     </div>
-
                     <div class="form-group">
-                        <label>Horário de preferência</label>
-                        <select id="horario">
-                            <option value="">Selecione</option>
-                            <option>08:00 – 09:00</option>
-                            <option>09:00 – 10:00</option>
-                            <option>10:00 – 11:00</option>
-                            <option>11:00 – 12:00</option>
-                            <option>13:00 – 14:00</option>
-                            <option>14:00 – 15:00</option>
-                            <option>15:00 – 16:00</option>
-                            <option>16:00 – 17:00</option>
-                            <option>17:00 – 18:00</option>
-                        </select>
+                        <label>Horário Desejado *</label>
+                        <input type="time" id="horario" min="09:00" max="20:00" required>
                     </div>
+                    <div class="time-note">
+                        <span>🕐</span>
+                        <span>O horário selecionado será verificado pela nossa equipe. Você receberá a confirmação ou
+                            sugestão de novo horário via WhatsApp.</span>
+                    </div>
+                    <div class="form-group full">
+                        <label>Mensagem <span class="opt">(opcional)</span></label>
+                        <textarea id="mensagem"
+                            placeholder="Conte-nos mais sobre o que você busca, dúvidas ou observações importantes..."></textarea>
+                    </div>
+                    <button type="button" class="form-submit" onclick="enviarAgendamento()">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Enviar via WhatsApp
+                    </button>
+                    <p class="whatsapp-note">Você será redirecionado ao WhatsApp com as informações preenchidas</p>
                 </div>
-
-                <button type="submit" class="btn-submit">
-                    Solicitar agendamento via WhatsApp
-                </button>
-
-            </form>
-
-            <div class="form-success" id="formSuccess">
-                <div class="form-success-icon">✓</div>
-                <h3>Solicitação enviada!</h3>
-                <p>Recebemos sua solicitação. Nossa equipe entrará em contato via WhatsApp em breve para confirmar seu
-                    horário. Obrigado!</p>
+                <div class="success-msg" id="successMsg">
+                    ✅ Solicitação enviada com sucesso! <br>
+                    Nossa equipe entrará em contato em breve para confirmar o horário.
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- LOCALIZAÇÃO -->
-    <section id="localizacao">
-        <div class="location-left">
-            <div class="section-label">Localização</div>
-            <h2>Estamos aqui para <em>atendê-lo</em></h2>
-
-            <div class="location-details">
-                <div class="location-item">
-                    <div class="location-icon">📍</div>
-                    <div class="location-item-text">
-                        <h4>Endereço</h4>
-                        <p>Rua das Flores, 842 — Sala 301<br>Jardim Paulista, São Paulo – SP<br>CEP 01403-000</p>
+    <!-- MAP & LOCATION -->
+    <section id="localizacao" class="map-section">
+        <div class="map-inner">
+            <div class="map-info reveal">
+                <span class="section-label">Onde estamos</span>
+                <h2 class="section-title">Fácil de <em>encontrar</em></h2>
+                <div class="info-block">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h5>Endereço</h5>
+                            <p>Av. Paulista, 1000 — Bela Vista<br>São Paulo — SP, 01310-100</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="location-item">
-                    <div class="location-icon">🕐</div>
-                    <div class="location-item-text">
-                        <h4>Horário de funcionamento</h4>
-                        <p>Segunda a Sexta: 08h – 19h<br>Sábado: 08h – 13h<br>Domingo: Fechado</p>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <h5>Horário de Funcionamento</h5>
+                            <p>Segunda a Sexta<br><strong>09h00 às 20h00</strong></p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="location-item">
-                    <div class="location-icon">📞</div>
-                    <div class="location-item-text">
-                        <h4>Contato</h4>
-                        <p>(11) 3456-7890<br>WhatsApp: (11) 99234-5678<br>contato@sorrirclinic.com.br</p>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h5>Contato</h5>
+                            <p>(11) 99999-9999<br>contato@clinicalumina.com.br</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="location-item">
-                    <div class="location-icon">🚇</div>
-                    <div class="location-item-text">
-                        <h4>Como chegar</h4>
-                        <p>A 5 min da estação Paulista (Metrô Linha 2 e 4). Estacionamento conveniado disponível no
-                            local.</p>
+                    <div class="info-item">
+                        <div class="info-icon">🚇</div>
+                        <div>
+                            <h5>Como Chegar</h5>
+                            <p>Metrô Trianon-Masp (Linha 2)<br>Estacionamento conveniado disponível</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="map-wrap">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1974700611!2d-46.6554!3d-23.5646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMzJzUyLjYiUyA0NsKwMzknMTkuNCJX!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="Localização Sorrir Clinic">
-            </iframe>
+            <div class="map-frame reveal">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0752456490893!2d-46.6552!3d-23.5630!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1680000000000"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    title="Localização Clínica Lumina">
+                </iframe>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <a href="#" class="nav-logo">Sorrir <span>Clinic</span></a>
-                <p>Odontologia de excelência com atendimento humanizado. Cuidamos do seu sorriso com dedicação e
-                    tecnologia de ponta.</p>
+        <div class="footer-grid">
+            <div>
+                <span class="footer-logo">Lumina<span>.</span></span>
+                <p>Cuidado integrado com excelência, tecnologia e humanidade. O seu bem-estar é a nossa missão.</p>
             </div>
             <div class="footer-col">
-                <h4>Navegação</h4>
+                <h5>Serviços</h5>
                 <ul>
-                    <li><a href="#sobre">Sobre nós</a></li>
-                    <li><a href="#galeria">Nossa estrutura</a></li>
-                    <li><a href="#localizacao">Localização</a></li>
-                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#">Odontologia</a></li>
+                    <li><a href="#">Estética Facial</a></li>
+                    <li><a href="#">Estética Corporal</a></li>
+                    <li><a href="#">Dermatologia</a></li>
+                    <li><a href="#">Saúde Integrativa</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Especialidades</h4>
+                <h5>Clínica</h5>
                 <ul>
-                    <li><a href="#agendamento">Ortodontia</a></li>
-                    <li><a href="#agendamento">Implantes</a></li>
-                    <li><a href="#agendamento">Estética Dental</a></li>
-                    <li><a href="#agendamento">Clínica Geral</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="https://wa.me/5511959105383">WhatsApp</a></li>
+                    <li><a href="https://www.instagram.com/kaizen.sr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Sorrir Clinic — Todos os direitos reservados</p>
-            <p>CRO-SP 98.372</p>
+            <p>© 2025 Clínica Lumina. Todos os direitos reservados.</p>
+            <p>Seg–Sex: 09h–20h &nbsp;·&nbsp; (11) 99999-9999</p>
         </div>
     </footer>
-
-    <!-- FLOATING BUTTONS -->
-    <div class="float-buttons">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/5511959105383" target="_blank" rel="noopener" class="float-btn float-whatsapp"
-            title="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                <path
-                    d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.37 5.07L2 22l5.12-1.34C8.49 21.53 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.72 0-3.33-.47-4.72-1.28l-.34-.2-3.04.8.81-2.96-.22-.36C3.49 14.79 3 13.46 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9z" />
-            </svg>
-        </a>
-        <!-- Instagram -->
-        <a href="https://instagram.com/sorrirclinic" target="_blank" rel="noopener" class="float-btn float-instagram"
-            title="Instagram">
-            <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-            </svg>
-        </a>
-    </div>
 
     <script src="./script.js"></script>
 </body>

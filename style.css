@@ -1039,15 +1039,15 @@ footer p {
     top: 4px;
     right: 24px;
 
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
 
     display: none;
     align-items: center;
     justify-content: center;
 
-    background: none;
     border: none;
+    background: none;
 
     font-size: 2rem;
     color: var(--charcoal);
